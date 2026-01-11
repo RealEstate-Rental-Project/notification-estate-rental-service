@@ -31,7 +31,7 @@ public class DeadLetterQueueService {
                                       String payload, String errorMessage, String stackTrace) {
         DeadLetterQueue dlq = DeadLetterQueue.builder()
                 .topic(topic)
-                .partition(partition)
+                .kafkaPartition(partition)
                 .kafkaOffset(offset)
                 .payload(payload)
                 .errorMessage(errorMessage)

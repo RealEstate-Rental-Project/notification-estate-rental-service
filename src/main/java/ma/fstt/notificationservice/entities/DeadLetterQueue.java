@@ -23,8 +23,8 @@ public class DeadLetterQueue {
     @Column(nullable = false)
     private String topic;
 
-    @Column(nullable = false)
-    private Integer partition;
+    @Column(name = "kafka_partition", nullable = false)
+    private Integer kafkaPartition;
 
     @Column(name = "kafka_offset", nullable = false)
     private Long kafkaOffset;
